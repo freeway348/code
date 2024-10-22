@@ -1,0 +1,481 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.8.0" title="Shotcut version 22.06.23" producer="main_bin">
+  <profile description="automatic" width="1280" height="848" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="80" display_aspect_den="53" frame_rate_num="30" frame_rate_den="1" colorspace="601"/>
+  <playlist id="main_bin">
+    <property name="xml_retain">1</property>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:06:54.200">
+    <property name="length">00:06:54.233</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:06:54.200"/>
+  </playlist>
+  <chain id="chain0" out="00:06:54.200">
+    <property name="length">00:06:54.233</property>
+    <property name="eof">pause</property>
+    <property name="resource">c:/Users/陈启明/Documents/Tencent Files/1656497721/Video/1033E7740390092A51273172B4A29222.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="shotcut:hash">b2f86f8895942180ffb9612c5fc34286</property>
+    <property name="shotcut:caption">1033E7740390092A51273172B4A29222.mp4</property>
+  </chain>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="chain0" in="00:00:00.000" out="00:06:54.200"/>
+  </playlist>
+  <producer id="producer0" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter0">
+      <property name="argument">The first day I came to the college,</property>
+      <property name="geometry">223 755 858 89 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <producer id="producer1" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter1" out="00:00:03.967">
+      <property name="argument">陈启明
+
+The first day I came to the school,</property>
+      <property name="geometry">-25 600 1280 212 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <producer id="producer2" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter2" out="00:00:03.967">
+      <property name="argument">I was impressed by the large area of the college.</property>
+      <property name="geometry">0 728 1280 120 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <producer id="producer3" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter3" out="00:00:05.367">
+      <property name="argument">At that time，freshmen were not 
+familiar with the school,</property>
+      <property name="geometry">133 751 927 95 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <tractor id="tractor0" in="00:00:00.000" out="00:00:00.000">
+    <property name="shotcut:transition">lumaMix</property>
+    <track producer="producer2" in="00:00:03.967" out="00:00:03.967"/>
+    <track producer="producer3" in="00:00:00.000" out="00:00:00.000"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="factory">loader</property>
+      <property name="mlt_service">luma</property>
+      <property name="alpha_over">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="start">-1</property>
+      <property name="accepts_blanks">1</property>
+      <property name="mlt_service">mix</property>
+    </transition>
+  </tractor>
+  <producer id="producer4" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter4" out="00:00:10.967">
+      <property name="argument">so it was easy for them to get lost 
+even if they followed the procedures.</property>
+      <property name="geometry">0 722 1280 126 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <producer id="producer5" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter5" out="00:00:08.967">
+      <property name="argument">I went around looking for the dormitory 
+and the reporting office</property>
+      <property name="geometry">0 751 1280 97 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <producer id="producer6" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter6" out="00:00:05.800">
+      <property name="argument">and asked teachers and school
+ staff on the way before
+ I finally found them(that two places）. </property>
+      <property name="geometry">0 726 1280 122 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <producer id="producer7" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter7" out="00:00:07.300">
+      <property name="argument">It took me a whole morning to 
+successfully report and check 
+in the dormitory. </property>
+      <property name="geometry">0 745 1280 103 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <producer id="producer8" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter8" out="00:00:03.100">
+      <property name="argument">I just felt tired.</property>
+      <property name="geometry">359 765 493 89 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <producer id="producer9" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter9" out="00:00:07.433">
+      <property name="argument">This experience also taught me
+ to be good at asking others for help
+ in strange places.</property>
+      <property name="geometry">0 715 1280 133 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <producer id="producer10" in="00:00:00.000" out="03:59:59.967">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">#00000000</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="shotcut:caption">transparent</property>
+    <property name="shotcut:detail">transparent</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <property name="seekable">1</property>
+    <filter id="filter10" out="00:00:03.967">
+      <property name="argument">郭煊鹏</property>
+      <property name="geometry">-420 239 1280 212 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">80</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">top</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">1</property>
+      <property name="shotcut:pointSize">60</property>
+    </filter>
+  </producer>
+  <playlist id="playlist1">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V2</property>
+    <blank length="00:00:57.067"/>
+    <entry producer="producer0" in="00:00:00.000" out="00:00:00.000"/>
+    <entry producer="producer1" in="00:00:00.000" out="00:00:03.967"/>
+    <blank length="00:00:00.133"/>
+    <entry producer="producer2" in="00:00:00.000" out="00:00:03.933"/>
+    <entry producer="tractor0" in="00:00:00.000" out="00:00:00.000"/>
+    <entry producer="producer3" in="00:00:00.033" out="00:00:05.367"/>
+    <blank length="00:00:00.567"/>
+    <entry producer="producer4" in="00:00:00.000" out="00:00:10.967"/>
+    <blank length="00:00:00.967"/>
+    <entry producer="producer5" in="00:00:00.000" out="00:00:08.967"/>
+    <blank length="00:00:00.167"/>
+    <entry producer="producer6" in="00:00:00.000" out="00:00:05.800"/>
+    <blank length="00:00:00.567"/>
+    <entry producer="producer7" in="00:00:00.000" out="00:00:07.300"/>
+    <blank length="00:00:00.367"/>
+    <entry producer="producer8" in="00:00:00.000" out="00:00:03.100"/>
+    <blank length="00:00:00.233"/>
+    <entry producer="producer9" in="00:00:00.000" out="00:00:07.433"/>
+    <blank length="00:00:00.500"/>
+    <entry producer="producer10" in="00:00:00.000" out="00:00:03.967"/>
+  </playlist>
+  <tractor id="tractor1" title="Shotcut version 22.06.23" in="00:00:00.000" out="00:06:54.200">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">0</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <track producer="playlist1"/>
+    <transition id="transition2">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition3">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.1</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">1</property>
+    </transition>
+    <transition id="transition4">
+      <property name="a_track">0</property>
+      <property name="b_track">2</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition5">
+      <property name="a_track">1</property>
+      <property name="b_track">2</property>
+      <property name="version">0.1</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">0</property>
+    </transition>
+  </tractor>
+</mlt>

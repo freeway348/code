@@ -1,0 +1,167 @@
+// 平衡树 -------- treap(tree + heap)
+/*
+BST ----- 二叉搜索树 (一般情况下不存在相同的权值，若有，则增加一个ans来记录权值出现的次数)  ---------- 中序遍历得到的值是升序排序的有序序列
+本质上--------> 动态维护一个有序序列
+性质： 1.当前节点的左子树的任何一个点的权值  <  当前节点的权值
+      2.当前节点的右子树的任何一个点的权值  >  当前节点的权值
+基本操作：1. 插入；    2. 删除；    3.找前驱/后继（前驱-----中序遍历中的前一个位置； 后继--------中序遍历中的后一个位置）
+
+例题： acwing：普通平衡树
+*/ 
+
+#include <iostream>
+#include <cstdio>
+#include <algorithm>
+#include <cstring>
+
+using namespace std;
+
+const int N = 1e5 + 10, INF = 1e8;
+int n,m;
+int a[N],k;
+struct Node
+{
+    int l,r;
+    int key,val;
+    int cnt,size; // cnt:数值相同的个数； size：每一个节点的子树总结点个数
+    bool flag; // 判断是否被炸, true: 没被炸， false：被炸了
+}tr[N];
+
+int root, idx; // root:根节点， idx：当前分配到的节点
+
+void pushup(int p) // 更新每个节点的size值
+{
+    tr[p].size = tr[p].cnt;
+    if (tr[p].key == tr[tr[p].l].key + 1)
+        tr[p].size += tr[tr[p].l].size;
+    if (tr[p].key == tr[tr[p].r].key - 1)
+        tr[p].size += tr[tr[p].r].size;
+}
+
+int get_node(int key) // 创建节点
+{
+    tr[++ idx].key = key;
+    tr[idx].val = rand(); // 取随机值
+    tr[idx].cnt = tr[idx].size = 1; // 叶节点
+    tr[idx].flag = true;
+    return idx;
+}
+
+void build() // 初始化
+{
+    get_node(-INF), get_node(INF);
+    root = 1, tr[1].r = 2;
+    pushup(root); // 更新size值
+}
+
+void insert(int &p, int key) // 同样要更新根节点，所以需要用到引用
+{
+    // 全局变量默认值为 0，结构体也一样，就例如说，插入一个数 x = 1，那么执行insert，先找到root指向的 - INF，发现 x 比 - INF大，那么就往右子树找，即：insert(tr[p].r, key); （这里 p == 1），然后进递归
+    // 此时 p = 2，key = INF，但此时 INF 的左右子树均为空，所以 tr[2].l = tr[2].r = 0, 随后就执行 if (!p) 判断通过后的 get_node 操作，其他数值的插入操作也类似
+    if (!p) p = get_node(key); // 如果 p == 0, 说明树是空的，所以直接创建节点
+    else if (tr[p].key == key) tr[p].cnt ++;
+    else if (tr[p].key > key)
+    {
+        insert(tr[p].l, key);
+    }
+    else 
+    {
+        insert(tr[p].r, key);
+    }
+    pushup(p);
+}
+
+void remove(int &p, int key)
+{
+    if (!p) return;
+    if (tr[p].key == key)
+    {
+        if (tr[p].cnt > 1) tr[p].cnt --;
+        else if (tr[p].l || tr[p].r) // 因为要删除节点 p，所以要先看看节点 p 有没有左子树或者右子树，如果有，那就先进行旋转，如果都没有就直接删除
+        {
+            if (!tr[p].r || tr[tr[p].l].val > tr[tr[p].r].val) // 如果右子树不存在，或者左子树的优先级比右子树大
+            {
+                zig(p);
+                remove(tr[p].r, key); // 因为左旋后，p 指向的节点改变了，原本的 p 节点变成了右旋后的右子树节点
+            }
+            else
+            {
+                zag(p);
+                remove(tr[p].l, key);
+            }
+        }
+        else p = 0; // 如果左右子树都不存在，那么就直接删除，置 0 即可
+    }
+    else if (tr[p].key > key) remove(tr[p].l, key); // 往左子树找
+    else remove(tr[p].r, key); // 往右子树找
+
+    pushup(p);
+}
+
+int get_rank_by_key(int p, int key) // 通过数值查排名(中序遍历)
+{
+    if (!p) return 0;
+    if (tr[p].key == key) return tr[tr[p].l].size + 1;
+    if (tr[p].key > key) return get_rank_by_key(tr[p].l, key);
+    return tr[tr[p].l].size + tr[p].cnt + get_rank_by_key(tr[p].r, key); 
+}
+
+int get_key_by_rank(int p, int rank) // 通过排名找数值(中序遍历)
+{
+    if (!p) return INF;
+    if (tr[tr[p].l].size >= rank) return get_key_by_rank(tr[p].l, rank);
+    if (tr[tr[p].l].size + tr[p].cnt >= rank) return tr[p].key;
+    return get_key_by_rank(tr[p].r, rank - tr[tr[p].l].size - tr[p].cnt); 
+    // 因为往右子树找，根节点的size会改变，变成右子树的size，而右子树又比根节点和左子树都要大，所以排名要减去根节点和左子树的总个数
+}
+
+int get_prev(int p, int key) // 找到严格小于 key 的最大数, 即：小于x的最大的数，也就是找前驱(中序遍历)
+{
+    if (!p) return -INF;
+    if (tr[p].key >= key) return get_prev(tr[p].l, key); // 一直往左找，直到找到严格小于 key 的值
+    return max(tr[p].key, get_prev(tr[p].r, key)); 
+    // 找到严格小于 key 的子树的根节点后，再继续找该根节点的右子树，如果找到，就返回最右的叶子结点值，如果找不到，就返回当前节点 p 的key值
+}
+
+int get_next(int p, int key) // 找到严格大于 key 的最小数, 即：大于x的最小的数，也就是找后继(中序遍历)
+{
+    if (!p) return INF;
+    if (tr[p].key <= key) return get_next(tr[p].r, key);
+    return min(tr[p].key, get_next(tr[p].l, key));
+}
+
+int main()
+{
+    build(); // 设置两个哨兵
+
+    cin >> n >> m;
+
+    for (int i = 1; i <= n; i ++)
+        insert(root, i);
+
+    while(m --)
+    {
+        char opt;
+        cin >> opt;
+        if (opt == 'D')
+        {
+            int x;
+            cin >> x;
+            a[k ++] = x;
+            remove(root, x);
+        }
+        else if (opt == 'Q')
+        {
+            int x;
+            cin >> x;
+            get_rank_by_key(root, x);
+            cout << tr[root].size - 1 << endl;
+        }
+        else if (opt == 'R')
+        {
+            insert(root, a[-- k]);
+        }
+    }
+
+    return 0;
+}
